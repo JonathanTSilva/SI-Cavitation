@@ -1,7 +1,7 @@
 %--------------------------------------------------------------------------
-% Script para convers„o do vetor packetRawData[] gerado pela
+% Script para convers√£o do vetor packetRawData[] gerado pela
 % pcap2mat tool (v.1.0.0 BETA)
-% Data: 2020-01-30
+% Data: 2020-05-07
 %
 % Exemplo de uso:
 % packets = PacketRawDataConversion(packetRawData);
@@ -9,7 +9,7 @@
 
 function ret = PacketRawDataConversion(packetRawData)
 
-%ObtÈm tamanho do vetor
+%Obt√©m tamanho do vetor
 tam = size(packetRawData);
 
 %Converte os dados separados por , em array individuais
@@ -22,13 +22,14 @@ clear packetRawData;
 
 %Converte os valores para inteiro (facilitar o processamento dos bytes)
 for i = 1:tam
-    packetRawData{i} = uint8(hex2dec(packetRawDataS{i}));
+    %packetRawData{i} = uint8(hex2dec(packetRawDataS{i}));
+    packetRawData{i} = uint8(str2double(packetRawDataS{i}));    
 end;
 
-%faz a tranposiÁ„o do vetor
+%faz a tranposi√ß√£o do vetor
 packetRawData = packetRawData';
 
-%apaga vari·veis auxiliares da memÛria
+%apaga vari√°veis auxiliares da mem√≥ria
 clear packetRawDataS tam i;
 
 ret = packetRawData;
