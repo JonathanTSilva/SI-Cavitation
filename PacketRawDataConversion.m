@@ -1,12 +1,3 @@
-%--------------------------------------------------------------------------
-% Script para conversão do vetor packetRawData[] gerado pela
-% pcap2mat tool (v.1.0.0 BETA)
-% Data: 2020-05-07
-%
-% Exemplo de uso:
-% packets = PacketRawDataConversion(packetRawData);
-%--------------------------------------------------------------------------
-
 function ret = PacketRawDataConversion(packetRawData)
 
 %Obtém tamanho do vetor
