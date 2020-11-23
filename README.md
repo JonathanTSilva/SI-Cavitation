@@ -1,0 +1,5 @@
+
+
+ABSTRACT: The condition monitoring of equipment is essential in industries, in order to prevent failures and ensure higher quality to activities, reducing the downtime and increasing plant availability. In this context, this work proposes the identification of current and voltage characteristics when operating hydraulic pumps through an experimental bench. A prototype of a hydraulic system was created for data collection, and through a developed algorithm, relevant information is extracted from the studied signals, coming from the industrial process. Machine learning tools for extracting and selecting attributes (such as standard deviation, entropy, harmonics, among others) are used to identify characteristics correlated with hydraulic pump failures. The results achieved should help industries to make better use of the data generated in the field, resulting in a longer useful life of their equipment when implementing the system.
+
+KEYWORDS: machine learning; hydraulic pumps; predictive maintenance; diagnostic system;
