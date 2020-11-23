@@ -1,3 +1,10 @@
+%-------------------------JONATHAN TOBIAS DA SILVA-------------------------
+%----------------------ENGENHARIA ELÉTRICA - 1ª TURMA----------------------
+%------------------INSTITUTO FEDERAL- CAMPUS SERTÃOZINHO-------------------
+%--------------------------------------------------------------------------
+%--------------------INICIAÇÃO - DIAGNÓSTICO DE FALHAS---------------------
+%--------------------------------------------------------------------------
+
 function y = GetActualCurrent(B1, B0)
 
 %1- Pegar os bytes responsáveis pela corrente máxima:

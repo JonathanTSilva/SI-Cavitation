@@ -1,9 +1,9 @@
-%-------------------JONATHAN TOBIAS DA SILVA-------------------
-%----------------ENGENHARIA ELÉTRICA - 1ª TURMA----------------
-%------------INSTITUTO FEDERAL- CAMPUS SERTÃOZINHO-------------
-%--------------------------------------------------------------
-%--------------INICIAÇÃO - DIAGNÓSTICO DE FALHAS---------------
-%--------------------------------------------------------------
+%-------------------------JONATHAN TOBIAS DA SILVA-------------------------
+%----------------------ENGENHARIA ELÉTRICA - 1ª TURMA----------------------
+%------------------INSTITUTO FEDERAL- CAMPUS SERTÃOZINHO-------------------
+%--------------------------------------------------------------------------
+%--------------------INICIAÇÃO - DIAGNÓSTICO DE FALHAS---------------------
+%--------------------------------------------------------------------------
 
 clear all; close all; clc;
 
@@ -12,7 +12,11 @@ j = 1;
 k = 1;
 
 %1- Carregar banco de dados:
-load('test2-24.mat');
+fileName = "x";
+file = sprintf("%s.mat", fileName);
+folder = "..\Dados\Oficial\mat\116cm\";
+dir = strcat(folder,file);
+load(dir);
 
 %2- Convertê-lo para arrays:
 packetRawData = PacketRawDataConversion(packetRawData);
@@ -36,13 +40,18 @@ for i=1:length(packetRawData)
 %    end
 end
 
-%4- Apagar variáveis extras:
+%4- Dividir amostras:
+aSplitSamples;
 
-%5- Plota valores da porcentagem da corrente máxima:
-t = (0:2:2*(length(Imax)-1)); %Ajustar para o tempo de cada pacote do simo
-figure(1);
-plot(t,Imax);
-xlabel('Reading time (ms)') 
-ylabel('Percentage of rated current (%)') 
-grid on;
+%5- Extrair atributos e gerar harmônicas:
+aAttributesExtraction;
 
+%6- Exportar attributes para csv:
+csvName = sprintf("%s.csv",fileName);
+csvwrite(csvName,attributes,0);
+
+%- Gerar gráficos:
+aGenerateFigures;
+
+%Apagar variáveis:
+clearvars file folder dir folderFig fig1 fig1Name fig1Local fig2 fig2Name fig2Local;

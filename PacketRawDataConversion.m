@@ -1,6 +1,13 @@
+%-------------------------JONATHAN TOBIAS DA SILVA-------------------------
+%----------------------ENGENHARIA ELÉTRICA - 1ª TURMA----------------------
+%------------------INSTITUTO FEDERAL- CAMPUS SERTÃOZINHO-------------------
+%--------------------------------------------------------------------------
+%--------------------INICIAÇÃO - DIAGNÓSTICO DE FALHAS---------------------
+%--------------------------------------------------------------------------
+
 function ret = PacketRawDataConversion(packetRawData)
 
-%ObtÃ©m tamanho do vetor
+%Obtém tamanho do vetor
 tam = size(packetRawData);
 
 %Converte os dados separados por , em array individuais
@@ -17,10 +24,10 @@ for i = 1:tam
     packetRawData{i} = uint8(str2double(packetRawDataS{i}));    
 end;
 
-%faz a tranposiÃ§Ã£o do vetor
+%faz a tranposição do vetor
 packetRawData = packetRawData';
 
-%apaga variÃ¡veis auxiliares da memÃ³ria
+%apaga variáveis auxiliares da memória
 clear packetRawDataS tam i;
 
 ret = packetRawData;
