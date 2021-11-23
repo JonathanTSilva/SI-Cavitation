@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <h1 align="center">
   <br>
-  <a href="https://github.com/JonathanTSilva/FP-CloudCavitation"><img src="./Images/logo-tcc.png" alt="Markdownify" width="200"></a>
+  <a href="https://github.com/JonathanTSilva/FP-CloudCavitation"><img src="./Images/logo-cavitation.png" alt="Markdownify" width="200"></a>
   <br>
   Scientific Iniciation - Cavitation
   <br>
