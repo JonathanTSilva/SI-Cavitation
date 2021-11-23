@@ -8,7 +8,7 @@
 </h1>
 
 <h4 align="center">
-  🧾 Cloud-based intelligent system for hydraulic pump failure detection.
+  🔬 Diagnostic system for hydraulic pump failures by means of electric current analysis and machine learning tools.
 </h4>
 
 <!-- PROJECT SHIELDS -->
